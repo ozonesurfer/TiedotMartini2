@@ -8,7 +8,7 @@ This is an experimental website/web server written in Go (golang). It employs th
 
 #Configuration
 
-Change the DATABASE_DIR setting in <b>/src/tiedotmartini1/config.go</b>, and make sure the new directory exists.
+Change the DATABASE_DIR setting in <b>/src/tiedotmartini2/config.go</b>, and make sure the new directory exists.
 
 #Building and Running
 
