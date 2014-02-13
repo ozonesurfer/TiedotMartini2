@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" href="/assets/style.css" type="text/css"></link>
+<title>{{.Title}}</title>
+</head>
+<body>
+<form action="/band/verify" method="post">
+<table>
+<tr>
+<td>Name:</td><td><input type="text" name="name" required /></td><td />
+</tr>
+<tr>
+<td>Location:</td>
+<td><input type="radio" name="loctype" value="existing" checked /></td>
+<td><select name="location_id">
+{{range .Locations}}
+<option value="{{.DocKey}}">{{.LocToString}}</option>
+{{end}}
+</select></td>
+</tr>
+<tr><td /><td><input type="radio" name="loctype" value="new" /></td><td>
+<table>
+<tr>
+<td>City:</td><td><input type="text" name="city" /></td>
+</tr>
+<tr>
+<td>State:</td><td><input type="text" name="state" /></td>
+</tr> 
+<tr>
+<td>Country:</td><td><input type="text" name="country" /></td>
+</tr> 
+</table>
+</td>
+</tr>
+</table>
+<input type="submit" value="Add Band" />
+</form>
+</body>
+</html>

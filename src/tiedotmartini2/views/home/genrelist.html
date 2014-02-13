@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" href="/assets/style.css" type="text/css"></link>
+<title>{{.Title}}</title>
+</head>
+<body>
+<h3>Click on a genre:</h3>
+<ul>
+{{range .Genres}}
+<li><a href='/home/bygenre/{{.DocKey}}'>{{.Value.name}}</a></li>
+{{end}}
+</ul>
+</body>
+</html>
